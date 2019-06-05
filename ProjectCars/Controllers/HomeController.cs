@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -10,20 +9,20 @@ namespace ProjectCars.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ICarRepository _carRepository;
+
+        public HomeController(ICarRepository carRepository)
+        {
+            _carRepository = carRepository;
+        }
+
         public IActionResult Index()
         {
-            return View();
-        }
+            ViewBag.title = "Przeglad Samochodow";
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+            var cars = _carRepository.GetAllCars().OrderBy(s => s.Make);
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(cars);
         }
     }
 }
