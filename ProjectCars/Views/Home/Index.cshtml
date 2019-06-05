@@ -1,9 +1,10 @@
-﻿@model IEnumerable<ProjectCars.Models.Car>
+﻿@*@model IEnumerable<ProjectCars.Models.Car>*@
+@model ProjectCars.ViewModels.HomeVM
 
-<h2>@ViewBag.title</h2>
-<br/>
+<h2>@Model.Title</h2>
+<br />
 
-@foreach (var car in Model)
+@foreach (var car in Model.Cars)
 {
     <div>
         <h2>@car.Make</h2>

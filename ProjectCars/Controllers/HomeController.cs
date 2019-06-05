@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ProjectCars.Models;
+using ProjectCars.ViewModels;
 
 namespace ProjectCars.Controllers
 {
@@ -18,11 +19,15 @@ namespace ProjectCars.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.title = "Przeglad Samochodow";
-
             var cars = _carRepository.GetAllCars().OrderBy(s => s.Make);
 
-            return View(cars);
+            var homeVM = new HomeVM()
+            {
+                Title = "Przeglad Samochodow",
+                Cars = cars.ToList()
+            };
+
+            return View(homeVM);
         }
     }
 }
