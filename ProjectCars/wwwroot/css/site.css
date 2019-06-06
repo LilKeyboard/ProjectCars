@@ -5,12 +5,13 @@
 .img-thumbnail {
     width: 350px;
     height: 350px;
-    background-color: #00000073;
+    background-color: #ffffff;
+    border: 1px solid black;
 }
 
 #IndexImg {
     height: 189px;
-    width: 340px;
+    width: 330px;
 }
 
 #navbarNav {
@@ -23,3 +24,9 @@
     /*padding-left: 16px;*/ /*Tyle bylo git*/
     padding-left: 7px;
 }
+
+#CarContainer {
+
+}
+
+

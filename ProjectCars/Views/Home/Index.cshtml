@@ -6,7 +6,7 @@
         @foreach (var car in Model.Cars)
         {
 
-            <div class="col-sm-4 col-lg-4 col-md-4 ">
+            <div class="col-sm-4 col-lg-4 col-md-4 mr-0 mt-4 " id="CarContainer">
                 <div class="img-thumbnail">
                     <a asp-controller="Home" asp-action="Szczegoly" asp-route-id="@car.Id"><img src="@car.MiniPhotoUrl" id="IndexImg"></a>
                     <div class="figure-caption" id="thumbnailId">
