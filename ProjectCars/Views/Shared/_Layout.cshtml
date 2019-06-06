@@ -13,31 +13,52 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE="/>
+              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ProjectCars</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Marki
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="@Url.Action("Szczegoly", "Home")">Audi</a>
+                            <a class="dropdown-item" href="@Url.Action("Szczegoly", "Home")">BMW</a>
+                            <a class="dropdown-item" href="@Url.Action("Szczegoly", "Home")">Mercedes-Benz</a>
+                            <a class="dropdown-item" href="@Url.Action("Szczegoly", "Home")">Porshe</a>
+                            <a class="dropdown-item" href="@Url.Action("Szczegoly", "Home")">Muscle cars</a>
+                        </div>
+                    </li>
+                    <li class="nav-item link">
+                        <a class="nav-link" asp-controller="Onas" asp-action="Index">O nas</a>
+                    </li>
+                    <li class="nav-item link">
+                        <a class="nav-link" asp-controller="Onas" asp-action="Index">Kontakt</a>
+                    </li>
+                    <li class="nav-item link">
+                        <a class="nav-link" asp-controller="Opinia" asp-action="Index">Opinia</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 pull-right" id="search">
+                    <div id="search1">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Wpisz szukaną fraze" aria-label="Search">
+                    </div>
+                    <div id="search2">
+                        <a id="lupaId" asp-controller="Wyszukiwanie" asp-action="Index"><img src="~/images/lupa.svg" /></a>
+                    </div>
+                </form>
+                </dv>
+</nav>
     </header>
     <div class="container">
         <partial name="_CookieConsentPartial" />
@@ -47,10 +68,21 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - ProjectCars - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+        <!-- Footer -->
+        <footer class="page-footer font-small blue">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">
+                © 2019 Copyright:
+                <a href="https://www.linkedin.com/in/wiktor-balcerzak-9b27b5181/"> Wiktor Balcerzak</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
     </footer>
+
+
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

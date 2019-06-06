@@ -1,21 +1,36 @@
-﻿@*@model IEnumerable<ProjectCars.Models.Car>*@
-@model ProjectCars.ViewModels.HomeVM
+﻿@model ProjectCars.ViewModels.HomeVM
+@*<h2>@Model.Tytul</h2>*@
 
-<h2>@Model.Title</h2>
-<br />
+<div class="container">
+    <div class="row">
+        @foreach (var car in Model.Cars)
+        {
 
-@foreach (var car in Model.Cars)
-{
-    <div>
-        <h2>@car.Make</h2>
-        <h2>@car.Model</h2>
-        <h3>@car.YearOfProduction</h3>
-        <h3>@car.Mileage</h3>
-        <h4>@car.Engine</h4>
-        <h4>@car.HorsePower</h4>
-        <h5>@car.Price.ToString("C")</h5>
-        <p>@car.Description</p>
+            <div class="col-sm-4 col-lg-4 col-md-4 ">
+                <div class="img-thumbnail">
+                    <a asp-controller="Home" asp-action="Szczegoly" asp-route-id="@car.Id"><img src="@car.MiniPhotoUrl" id="IndexImg"></a>
+                    <div class="figure-caption" id="thumbnailId">
+                        <h5>
+                            <a asp-controller="Home" asp-action="Szczegoly" asp-route-id="@car.Id">@car.Make</a> - @car.Model - @car.YearOfProduction
+                        </h5>
+                        <h6>Cena : @car.Price.ToString("c")</h6>
+                        <h6>
+                            Przebieg : @car.Mileage
+                        </h6>
+                        <h6>
+                            Pojemność : @car.Engine
+                        </h6>
+                        <h6>
+                            Moc : @car.HorsePower
+                        </h6>
+                        @*<p>@samochod.Description</p>*@
+                    </div>
+                </div>
+            </div>
+
+        }
+
     </div>
-}
+</div>
 
 
