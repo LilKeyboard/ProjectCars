@@ -48,15 +48,24 @@
 
 .navbar, .navbar-expand-lg, .navbar-light .bg-light {
     margin-bottom: 13px;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 6px 6px -6px #999;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 20px;
+    color: black;
 }
 
 body {
     background-color: #ededed;
 }
 
-/*#CarContainer {
-
-}*/
+.container {
+    margin-bottom: 11px;
+}
 
 .img-thumbnail {
     width: 350px;
@@ -69,6 +78,12 @@ body {
 #IndexImg {
     height: 189px;
     width: 330px;
+    border-radius: 2px;
+}
+
+#thumbnailId {
+    margin-top: 9px;
+    color: black;
 }
 
 .nav-link {
@@ -81,9 +96,3 @@ body {
 .dropdown-toggle::after {
     display: none;
 }
-
-
-
-
-
-
