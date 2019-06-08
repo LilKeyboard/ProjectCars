@@ -34,5 +34,10 @@ namespace ProjectCars.Controllers
         {
             return View("Contact");
         }
+
+        public IActionResult AboutUs()
+        {
+            return View("AboutUs");
+        }
     }
 }

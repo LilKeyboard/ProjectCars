@@ -96,3 +96,13 @@ body {
 .dropdown-toggle::after {
     display: none;
 }
+
+#AbousUsPhoto {
+    width: 54%;
+    height: 270px;
+}
+
+#TextFromAboutUs {
+    text-align: center;
+}
+
