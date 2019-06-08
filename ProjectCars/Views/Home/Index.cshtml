@@ -8,7 +8,7 @@
 
             <div class="col-sm-4 col-lg-4 col-md-4 mr-0 mt-4 " id="CarContainer">
                 <div class="img-thumbnail">
-                    <a asp-controller="Home" asp-action="Szczegoly" asp-route-id="@car.Id"><img src="@car.MiniPhotoUrl" id="IndexImg"></a>
+                    <a asp-controller="Cars" asp-action="Details" asp-route-id="@car.Id"><img src="@car.MiniPhotoUrl" id="IndexImg"></a>
                     <div class="figure-caption" id="thumbnailId">
                         <h5>
                             @car.Make - @car.Model - @car.YearOfProduction

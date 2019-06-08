@@ -29,5 +29,10 @@ namespace ProjectCars.Controllers
 
             return View(homeVM);
         }
+
+        public IActionResult Contact()
+        {
+            return View("Contact");
+        }
     }
 }
