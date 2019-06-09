@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<ProjectCars.Models.Car>
+
+<div class="container">
+    <div class="row">
+        @foreach (var car in Model)
+        {
+
+            <div class="col-sm-4 col-lg-4 col-md-4 mr-0 mt-4 " id="CarContainer">
+                <div class="img-thumbnail">
+                    <a asp-controller="Cars" asp-action="Details" asp-route-id="@car.Id"><img src="@car.MiniPhotoUrl" id="IndexImg"></a>
+                    <div class="figure-caption" id="thumbnailId">
+                        <h5>
+                            @car.Make - @car.Model - @car.YearOfProduction
+                        </h5>
+                        <h6>Cena : @car.Price.ToString("c")</h6>
+                        <h6>
+                            Przebieg : @car.Mileage
+                        </h6>
+                        <h6>
+                            Pojemność : @car.Engine
+                        </h6>
+                        <h6>
+                            Moc : @car.HorsePower
+                        </h6>
+                        @*<p>@samochod.Description</p>*@
+                    </div>
+                </div>
+            </div>
+
+        }
+
+    </div>
+</div>
+
+

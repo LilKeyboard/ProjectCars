@@ -37,5 +37,10 @@ namespace ProjectCars.Models
         {
             return cars.FirstOrDefault(s => s.Id == CarId);
         }
+
+        public IEnumerable<Car> GetCarsByMake(string Make)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -34,9 +34,9 @@
                             Marki
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="@Url.Action("Details", "Home")">Audi</a>
-                            <a class="dropdown-item" href="@Url.Action("Details", "Home")">BMW</a>
-                            <a class="dropdown-item" href="@Url.Action("Details", "Home")">Mercedes-Benz</a>
+                            <a class="dropdown-item" asp-controller="Car" asp-action="Index" asp-route-Make="Audi">Audi</a>
+                            <a class="dropdown-item" asp-controller="Car" asp-action="Index" asp-route-Make="BMW">BMW</a>
+                            <a class="dropdown-item" asp-controller="Car" asp-action="Index" asp-route-Make="Mercedes-Benz">Mercedes-Benz</a>
                             <a class="dropdown-item" href="@Url.Action("Details", "Home")">Porshe</a>
                             <a class="dropdown-item" href="@Url.Action("Details", "Home")">Muscle cars</a>
                         </div>

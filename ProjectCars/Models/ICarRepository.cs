@@ -6,5 +6,6 @@ namespace ProjectCars.Models
     {
         IEnumerable<Car> GetAllCars();
         Car GetCarById(int Id);
+        IEnumerable<Car> GetCarsByMake(string Make);
     }
 }
