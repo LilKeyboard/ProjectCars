@@ -13,6 +13,24 @@ namespace ProjectCars.Models
             _appDbContext = appDbContext;
         }
 
+        public void AddCar(Car car)
+        {
+            _appDbContext.Cars.Add(car);
+            _appDbContext.SaveChanges();
+        }
+
+        public void EditCar(Car car)
+        {
+            _appDbContext.Cars.Update(car);
+            _appDbContext.SaveChanges();
+        }
+
+        public void RemoveCar(Car car)
+        {
+            _appDbContext.Cars.Remove(car);
+            _appDbContext.SaveChanges();
+        }
+
         public IEnumerable<Car> GetAllCars()
         {
             return _appDbContext.Cars;
@@ -27,5 +45,6 @@ namespace ProjectCars.Models
         {
             return _appDbContext.Cars.Where(c => c.Make.Contains(Make));
         }
+
     }
 }

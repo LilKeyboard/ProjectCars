@@ -42,5 +42,20 @@ namespace ProjectCars.Models
         {
             throw new System.NotImplementedException();
         }
+
+        public void AddCar(Car car)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void EditCar(Car car)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void RemoveCar(Car car)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
