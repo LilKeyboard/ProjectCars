@@ -19,7 +19,7 @@ namespace ProjectCars
 
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            //CreateWebHostBuilder(args).Build().Run();
 
             var host = CreateWebHostBuilder(args).Build();
 
@@ -38,6 +38,8 @@ namespace ProjectCars
                     throw;
                 }
             }
+
+            host.Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

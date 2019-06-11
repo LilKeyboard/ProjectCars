@@ -35,6 +35,7 @@ namespace ProjectCars
 
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<ICarRepository, CarRepository>();
+            services.AddTransient<IOpinionRepository, OpinionRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

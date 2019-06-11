@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjectCars.Models
 {
-    [Table("Cars")]
+   //[Table("Cars")]
     public class Car
     {
         [Key]
