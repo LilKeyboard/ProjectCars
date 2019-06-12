@@ -20,5 +20,22 @@ namespace ProjectCars.Controllers
         {
             return View();
         }
+
+        [HttpPost] 
+        public IActionResult Index(Opinion opinion)      
+        {
+            if (ModelState.IsValid)
+            {
+                _opinionRepository.AddOpinion(opinion);
+                return RedirectToAction("OpinionSent");
+            }
+
+            return (View(opinion));  //If smth is wrong in form
+        }
+
+        public IActionResult OpinionSent()
+        {
+            return View();
+        }
     }
 }
