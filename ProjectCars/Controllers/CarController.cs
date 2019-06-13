@@ -16,10 +16,6 @@ namespace ProjectCars.Controllers
             _carRepository = carRepository;
         }
 
-        public IActionResult OnlyOneMake(string Make)
-        {
-            return View(_carRepository.GetCarsByMake(Make));
-        }
 
     }
 }
