@@ -1,5 +1,43 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model IEnumerable<Car>
+
+<table class="table" style="background-color:azure">
+    <thead>
+        <tr>
+            <th>Marka</th>
+            <th>Model</th>
+            <th>Rok</th>
+            <th>Przebieg</th>
+            <th>Pojemność</th>
+            <th>Paliwo</th>
+            <th>Moc</th>
+            <th>Opis</th>
+            <th>Cena</th>
+            <th>Miniaturka</th>
+            <th>
+                <a asp-action="Create" class="btn btn-danger btn-sm">Dodaj nowy</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Make)</td>
+                <td>@Html.DisplayFor(modelItem => item.Model)</td>
+                <td>@Html.DisplayFor(modelItem => item.YearOfProduction)</td>
+                <td>@Html.DisplayFor(modelItem => item.Mileage)</td>
+                <td>@Html.DisplayFor(modelItem => item.Engine)</td>
+                <td>@Html.DisplayFor(modelItem => item.Fuel)</td>
+                <td>@Html.DisplayFor(modelItem => item.HorsePower)</td>
+                <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                <td><img src="@item.MiniPhotoUrl" height="100" width="100" /></td>
+                <td>
+                    <a asp-controller="Car" asp-action="Details" asp-route-id="@item.Id" class="btn btn-success btn-sm" style="margin-bottom:3px">Szczegóły</a>
+                    <a asp-controller="Car" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm" style="margin-bottom:3px">Edytuj</a>
+                    <a asp-controller="Car" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-success btn-sm" style="margin-bottom:3px">Usuń</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
