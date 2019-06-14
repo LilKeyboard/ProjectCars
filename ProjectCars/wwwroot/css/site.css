@@ -59,6 +59,21 @@
     color: black;
 }
 
+#logReg {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    list-style: none;
+}
+
+#RegisterBtn {
+    margin-right: 8px;
+}
+
+#logoutForm {
+    margin-right: 25px;
+}
+
 body {
     background-color: #ededed;
 }
@@ -105,4 +120,3 @@ body {
 #TextFromAboutUs {
     text-align: center;
 }
-
