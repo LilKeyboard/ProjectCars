@@ -19,7 +19,7 @@ namespace ProjectCars.Controllers
 
         public IActionResult Index()
         {
-            var cars = _carRepository.GetAllCars().OrderBy(s => s.Id);
+            var cars = _carRepository.GetAllCars().OrderBy(s => s.Make);
 
             var homeVM = new HomeVM()
             {
