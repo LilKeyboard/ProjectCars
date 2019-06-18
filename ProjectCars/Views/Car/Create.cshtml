@@ -5,17 +5,7 @@
 <div class="row">
 
     <div class="col-md-4">
-        <form asp-action="UploadFile" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <input type="hidden" asp-for="Id" />
-                <label class="control-label">Zdjęcie Samochodu</label><br />
-                <img src="@ViewBag.ImgPath" height="210" width="370" /><br />
-                <input type="file" name="file" style="margin-top: 10px" />
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Załaduj zdjęcie" />
-            </div>
-        </form>
+
     </div>
 
     <form asp-action="Create">
@@ -68,8 +58,33 @@
                 <input asp-for="Description" class="form-control info" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <input type="hidden" asp-for="PhotoUrl" value="@ViewBag.ImgPath" />
-            <input type="hidden" asp-for="PhotoUrl" value="@ViewBag.ImgPath" />
+            <div class="form-group">
+                <label asp-for="MiniPhotoUrl" class="control-label"></label>
+                <input asp-for="MiniPhotoUrl" class="form-control info" />
+                <span asp-validation-for="MiniPhotoUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhotoUrl1" class="control-label"></label>
+                <input asp-for="PhotoUrl1" class="form-control info" />
+                <span asp-validation-for="PhotoUrl1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhotoUrl2" class="control-label"></label>
+                <input asp-for="PhotoUrl2" class="form-control info" />
+                <span asp-validation-for="PhotoUrl2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhotoUrl3" class="control-label"></label>
+                <input asp-for="PhotoUrl3" class="form-control info" />
+                <span asp-validation-for="PhotoUrl3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhotoUrl4" class="control-label"></label>
+                <input asp-for="PhotoUrl4" class="form-control info" />
+                <span asp-validation-for="PhotoUrl4" class="text-danger"></span>
+            </div>
+            @*<input type="hidden" asp-for="PhotoUrl" value="@ViewBag.ImgPath" />
+            <input type="hidden" asp-for="PhotoUrl" value="@ViewBag.ImgPath" />*@
             <div class="form-group">
                 <input type="submit" value="Dodaj samochód" class="btn btn-success" style="margin-top:30px" />
                 <a asp-action="Index" class="btn btn-danger pull-right" style="margin-top:30px">Powrót</a>

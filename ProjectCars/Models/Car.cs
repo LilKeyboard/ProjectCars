@@ -43,10 +43,16 @@ namespace ProjectCars.Models
         public decimal Price { get; set; }
 
         [Required]
-        public string PhotoUrl { get; set; }
+        public string MiniPhotoUrl { get; set; }
 
         [Required]
-        public string MiniPhotoUrl { get; set; }
+        public string PhotoUrl1 { get; set; }
+
+        public string PhotoUrl2 { get; set; }
+
+        public string PhotoUrl3 { get; set; }
+
+        public string PhotoUrl4 { get; set; }
 
     }
 }
